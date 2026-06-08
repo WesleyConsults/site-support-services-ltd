@@ -54,10 +54,14 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-primary transition-all duration-300">
+              <span className={`text-lg sm:text-xl font-extrabold tracking-tight transition-all duration-300 ${scrolled ? "text-primary" : "text-white"}`}>
                 Site Support <span className="text-accent">Services</span>
               </span>
-              <span className={`text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase ${scrolled ? "text-slate-600" : "text-slate-500"} group-hover:text-primary transition-all duration-300`}>
+              <span className={`text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase transition-all duration-300 ${
+                scrolled
+                  ? "text-slate-600 group-hover:text-primary"
+                  : "text-slate-300 group-hover:text-accent"
+              }`}>
                 {companyInfo.tagline}
               </span>
             </div>
@@ -73,15 +77,19 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-semibold transition-all-300 relative ${
                     isActive
-                      ? "text-primary font-bold"
-                      : "text-slate-700 hover:text-primary hover:bg-slate-100/50"
+                      ? scrolled
+                        ? "text-primary font-bold"
+                        : "text-white font-bold"
+                      : scrolled
+                        ? "text-slate-700 hover:text-primary hover:bg-slate-100/50"
+                        : "text-slate-200 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {link.label}
                   {isActive && (
                     <motion.span
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-3 right-3 h-[2px] bg-primary rounded-full"
+                      className={`absolute bottom-0 left-3 right-3 h-[2px] rounded-full ${scrolled ? "bg-primary" : "bg-accent"}`}
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -94,7 +102,9 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href={`tel:${companyInfo.phones[0].link}`}
-              className="flex items-center text-sm font-semibold text-slate-700 hover:text-primary transition-all-300"
+              className={`flex items-center text-sm font-semibold transition-all-300 ${
+                scrolled ? "text-slate-700 hover:text-primary" : "text-slate-200 hover:text-white"
+              }`}
             >
               <Phone className="w-4 h-4 mr-2 text-accent" />
               <span className="hidden lg:inline">{companyInfo.phones[0].value}</span>
@@ -112,12 +122,16 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:text-primary hover:bg-slate-100 focus:outline-none"
+              className={`inline-flex items-center justify-center p-2 rounded-md transition-all-300 ${
+                scrolled
+                  ? "text-slate-700 hover:text-primary hover:bg-slate-100 focus:outline-none"
+                  : "text-slate-200 hover:text-white hover:bg-white/10 focus:outline-none"
+              }`}
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="block h-6 h-6" /> : <Menu className="block h-6 h-6" />}
+              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
             </button>
           </div>
         </div>
