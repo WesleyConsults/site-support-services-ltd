@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Globe, ArrowRight } from "lucide-react";
 import { companyInfo, navigationLinks, services } from "@/data/siteContent";
 
@@ -13,15 +14,27 @@ export default function Footer() {
           
           {/* Column 1: Brand Info */}
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                Site Support <span className="text-accent">Services</span>
-              </span>
+            <Link href="/" className="inline-block group">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="relative w-10 h-10 overflow-hidden rounded-lg bg-white/10 p-0.5 shrink-0">
+                  <Image
+                    src="/logo.png"
+                    alt="Site Support Services Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xl font-extrabold tracking-tight text-white">
+                    Site Support <span className="text-accent">Services</span>
+                  </span>
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-white transition-all duration-300">
+                    {companyInfo.tagline}
+                  </span>
+                </div>
+              </div>
             </Link>
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-              {companyInfo.tagline}
-            </p>
-            <p className="text-slate-400 text-sm leading-relaxed mt-2">
+            <p className="text-slate-400 text-sm leading-relaxed">
               {companyInfo.aboutSummary}
             </p>
             <div className="flex items-center space-x-2 text-xs font-semibold text-slate-400">

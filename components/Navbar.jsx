@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Phone } from "lucide-react";
@@ -41,13 +42,24 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo Section */}
-          <Link href="/" className="group flex flex-col focus:outline-none">
-            <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-primary transition-all duration-300">
-              Site Support <span className="text-accent">Services</span>
-            </span>
-            <span className={`text-[10px] sm:text-xs font-semibold tracking-wider uppercase ${scrolled ? "text-slate-600" : "text-slate-500"} group-hover:text-primary transition-all duration-300`}>
-              {companyInfo.tagline}
-            </span>
+          <Link href="/" className="group flex items-center space-x-3 focus:outline-none">
+            <div className="relative w-10 h-10 overflow-hidden rounded-lg border border-slate-200 bg-white p-0.5 shrink-0 shadow-sm">
+              <Image
+                src="/logo.png"
+                alt="Site Support Services Logo"
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-primary transition-all duration-300">
+                Site Support <span className="text-accent">Services</span>
+              </span>
+              <span className={`text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase ${scrolled ? "text-slate-600" : "text-slate-500"} group-hover:text-primary transition-all duration-300`}>
+                {companyInfo.tagline}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
