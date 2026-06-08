@@ -49,6 +49,7 @@ export default function Navbar() {
                 alt="Site Support Services Logo"
                 fill
                 priority
+                sizes="40px"
                 className="object-contain"
               />
             </div>

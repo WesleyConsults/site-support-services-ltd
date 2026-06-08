@@ -21,6 +21,7 @@ export default function Footer() {
                     src="/logo.png"
                     alt="Site Support Services Logo"
                     fill
+                    sizes="40px"
                     className="object-contain"
                   />
                 </div>
