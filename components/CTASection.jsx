@@ -10,7 +10,7 @@ export default function CTASection() {
     <section className="relative bg-primary py-20 px-4 overflow-hidden border-t border-primary-light/10">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20" />
         <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full filter blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-primary-light/30 rounded-full filter blur-[65px] pointer-events-none" />
       </div>

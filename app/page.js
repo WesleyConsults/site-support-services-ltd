@@ -52,11 +52,11 @@ export default function Home() {
 
             {/* Right side: Modern graphic block placeholder */}
             <div className="lg:col-span-5 relative">
-              <div className="relative aspect-4/3 bg-primary rounded-2xl overflow-hidden shadow-xl border border-primary-light/10 p-8 flex flex-col justify-between text-white">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
+              <div className="relative aspect-[4/3] bg-primary rounded-2xl overflow-hidden shadow-xl border border-primary-light/10 p-8 flex flex-col justify-between text-white">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
                 
                 <div className="space-y-2 relative z-10">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-accent bg-[#073629] border border-primary-light/40 px-2 py-1 rounded">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-accent bg-primary-dark border border-primary-light/40 px-2 py-1 rounded">
                     Core Business Categories
                   </span>
                   <h3 className="text-xl font-bold tracking-wide mt-2">
@@ -64,7 +64,7 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <div className="relative z-10 bg-[#073629]/90 border border-primary-light/35 p-4 rounded-lg">
+                <div className="relative z-10 bg-primary-dark/90 border border-primary-light/35 p-4 rounded-lg">
                   <span className="text-xs text-slate-300 italic">
                     "Reliability is not just a target; it is the baseline of our service."
                   </span>

@@ -164,7 +164,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Legal Panel */}
-      <div className="bg-[#041d16] py-6 border-t border-primary/10">
+      <div className="bg-surface-darker py-6 border-t border-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-medium">
           <p className="text-center sm:text-left mb-2.5 sm:mb-0">
             &copy; {currentYear} {companyInfo.name}. All rights reserved.

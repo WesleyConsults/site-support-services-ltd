@@ -12,7 +12,7 @@ export default function Industries() {
       {/* 1. Page Header / Hero */}
       <section className="relative bg-primary-dark text-white pt-36 pb-20 overflow-hidden border-b border-primary-light/10">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
           <div className="absolute -top-10 -right-10 w-80 h-80 bg-accent/5 rounded-full filter blur-[100px]" />
         </div>
         
@@ -72,7 +72,7 @@ export default function Industries() {
                 >
                   {/* Visual Left/Right Graphic Panel */}
                   <div className="lg:w-1/3 bg-primary-dark text-white p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden shrink-0">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-25" />
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-25" />
                     <div className="absolute bottom-0 right-0 w-24 h-24 bg-accent/10 rounded-full filter blur-xl" />
                     
                     <div className="relative z-10 space-y-4">

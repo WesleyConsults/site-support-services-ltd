@@ -196,7 +196,7 @@ export default function Contact() {
       {/* 1. Page Header / Hero */}
       <section className="relative bg-primary-dark text-white pt-36 pb-20 overflow-hidden border-b border-primary-light/10">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
           <div className="absolute -top-10 -right-10 w-80 h-80 bg-accent/5 rounded-full filter blur-[100px]" />
         </div>
         
@@ -327,7 +327,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
-            className="relative bg-[#0b2921] rounded-2xl p-6 sm:p-12 overflow-hidden shadow-inner border border-primary/20 text-white min-h-[300px] sm:min-h-[400px] flex flex-col justify-between"
+            className="relative bg-surface-dark rounded-2xl p-6 sm:p-12 overflow-hidden shadow-inner border border-primary/20 text-white min-h-[300px] sm:min-h-[400px] flex flex-col justify-between"
           >
             {/* Mock Map Grid lines */}
             <div className="absolute inset-0 z-0">
@@ -345,7 +345,7 @@ export default function Contact() {
             </div>
 
             {/* Content over map */}
-            <div className="relative z-10 space-y-2 max-w-sm bg-[#041612]/95 border border-primary-light/40 p-5 rounded-xl shadow-lg mt-auto lg:mt-0">
+            <div className="relative z-10 space-y-2 max-w-sm bg-surface-darker/95 border border-primary-light/40 p-5 rounded-xl shadow-lg mt-auto lg:mt-0">
               <div className="flex items-center space-x-2.5 text-accent">
                 <MapPin className="w-5.5 h-5.5 animate-bounce shrink-0" />
                 <h4 className="text-sm font-bold uppercase tracking-wide text-white">

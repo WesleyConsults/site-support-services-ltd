@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Background Architectural Overlay */}
       <div className="absolute inset-0 z-0">
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c5944_1px,transparent_1px),linear-gradient(to_bottom,#0c5944_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,86,93,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(4,86,93,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35" />
         {/* Light teal spotlight/glow */}
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary-light/25 rounded-full filter blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-accent/5 rounded-full filter blur-[80px] pointer-events-none" />
@@ -113,7 +113,7 @@ export default function Hero() {
             className="lg:col-span-5 hidden lg:block"
           >
             <div className="relative p-1 bg-gradient-to-br from-primary-light via-primary to-accent/30 rounded-2xl shadow-2xl">
-              <div className="bg-[#05261d] p-8 rounded-[15px] space-y-6">
+              <div className="bg-surface-dark p-8 rounded-[15px] space-y-6">
                 <div className="flex justify-between items-start">
                   <div className="p-3 bg-primary-light/40 rounded-lg text-accent">
                     <Shield className="w-8 h-8" />
@@ -148,7 +148,7 @@ export default function Hero() {
                   </ul>
                 </div>
 
-                <div className="bg-[#073629] p-4 rounded-lg flex items-center space-x-3.5 border border-primary-light/20">
+                <div className="bg-primary-dark p-4 rounded-lg flex items-center space-x-3.5 border border-primary-light/20">
                   <Award className="w-10 h-10 text-accent shrink-0" />
                   <div className="text-xs text-slate-300 leading-normal font-medium">
                     Led by experienced Managing Director <span className="text-white font-bold">{companyInfo.managingDirector}</span>.
