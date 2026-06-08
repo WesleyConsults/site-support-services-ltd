@@ -270,19 +270,16 @@ export default function Contact() {
 
               {/* Emails */}
               <ContactCard iconName="Mail" title="Email Inquiries" index={2}>
-                <div className="space-y-1">
-                  <a
-                    href={`mailto:${companyInfo.emails[0].address}`}
-                    className="block font-semibold text-slate-800 hover:text-accent transition-all-300 text-xs sm:text-sm break-all"
-                  >
-                    {companyInfo.emails[0].address} <span className="text-[10px] text-primary bg-primary/5 border border-primary/20 px-1.5 py-0.5 rounded font-bold uppercase">Primary</span>
-                  </a>
-                  <a
-                    href={`mailto:${companyInfo.emails[1].address}`}
-                    className="block text-slate-500 hover:text-accent transition-all-300 text-xs sm:text-sm break-all"
-                  >
-                    {companyInfo.emails[1].address} <span className="text-[10px] text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded font-bold uppercase">Backup</span>
-                  </a>
+                <div className="space-y-1.5">
+                  {companyInfo.emails.map((email) => (
+                    <a
+                      key={email.address}
+                      href={`mailto:${email.address}`}
+                      className="block font-semibold text-slate-800 hover:text-accent transition-all-300 text-xs sm:text-sm break-all"
+                    >
+                      {email.address}
+                    </a>
+                  ))}
                 </div>
               </ContactCard>
 

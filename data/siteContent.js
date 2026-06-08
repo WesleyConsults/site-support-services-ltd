@@ -9,8 +9,7 @@ export const companyInfo = {
     { label: "Secondary Phone", value: "+233 (0) 57 264 3305", link: "+233572643305" }
   ],
   emails: [
-    { label: "Primary Contact", address: "md@sitesservicesgh.com" },
-    { label: "Backup Contact", address: "sitesservice17@gmail.com" }
+    { label: "Primary Contact", address: "sitesservice17@gmail.com" }
   ],
   location: "Number 9 Shippers Road, Adjacent Shippers Council, Takoradi, Ghana",
   postalAddress: "P.O. Box 634, Takoradi, Ghana",
