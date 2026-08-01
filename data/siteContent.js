@@ -48,11 +48,11 @@ export const services = [
       "Experienced industrial chefs and stewards",
       "Rigid food safety and hygiene controls"
     ],
-    heroImage: "/images/services/catering-hero-ghana.jpg",
+    heroImage: "/images/services/catering-hero-ghana.webp",
     heroAlt: "Industrial kitchen chef preparing meals for site workforce catering",
     galleryImages: [
       {
-        src: "/images/services/catering-gallery-ghana.jpg",
+        src: "/images/services/catering-gallery-ghana.webp",
         alt: "Organized remote camp dining hall and high-volume catering setup",
         caption: "High-capacity dining setup prepared for remote workforce meal service."
       }
@@ -78,11 +78,11 @@ export const services = [
       "Quality control process design",
       "Risk assessment and mitigation support"
     ],
-    heroImage: "/images/services/qhse-hero-ghana.jpg",
+    heroImage: "/images/services/qhse-hero-ghana.webp",
     heroAlt: "Industrial safety inspection and QHSE audit on work site",
     galleryImages: [
       {
-        src: "/images/services/qhse-gallery-ghana.jpg",
+        src: "/images/services/qhse-gallery-ghana.webp",
         alt: "Workplace safety team reviewing compliance checklist and risk management procedures",
         caption: "On-site safety team reviewing operational risk assessments and safety protocols."
       }
@@ -108,11 +108,11 @@ export const services = [
       "46-ton reach stacker (RST) container handling",
       "Flexible project-based rental durations and operator support"
     ],
-    heroImage: "/images/services/equipment-hero-ghana.jpg",
+    heroImage: "/images/services/equipment-hero-ghana.webp",
     heroAlt: "Industrial transport vehicles and port equipment ready for fleet dispatch",
     galleryImages: [
       {
-        src: "/images/services/equipment-gallery-ghana.jpg",
+        src: "/images/services/equipment-gallery-ghana.webp",
         alt: "Heavy construction machinery for site operations rental",
         caption: "Reliable heavy machinery available for flexible project-based lease terms."
       }
@@ -138,11 +138,11 @@ export const services = [
       "Fully serviced office environments",
       "Flexible lease arrangements"
     ],
-    heroImage: "/images/services/accommodation-hero-ghana.jpg",
+    heroImage: "/images/services/accommodation-hero-ghana.webp",
     heroAlt: "Serviced project office environment for staff and operational teams",
     galleryImages: [
       {
-        src: "/images/services/accommodation-gallery-ghana.jpg",
+        src: "/images/services/accommodation-gallery-ghana.webp",
         alt: "Furnished accommodation living space for site consultants and workforce personnel",
         caption: "Comfortable, fully serviced staff accommodation near strategic project sites."
       }
@@ -168,11 +168,11 @@ export const services = [
       "Welfare and recreation space management",
       "24/7 support desk and operations monitoring"
     ],
-    heroImage: "/images/services/camp-hero-ghana.jpg",
+    heroImage: "/images/services/camp-hero-ghana.webp",
     heroAlt: "Remote worker accommodation camp facility management and site layout",
     galleryImages: [
       {
-        src: "/images/services/camp-gallery-ghana.jpg",
+        src: "/images/services/camp-gallery-ghana.webp",
         alt: "Facility maintenance team keeping camp amenities operational and clean",
         caption: "Dedicated site staff managing daily facility maintenance and sanitation routines."
       }
@@ -198,11 +198,11 @@ export const services = [
       "Payroll administration and crew welfare",
       "Short-term project-based or long-term staffing"
     ],
-    heroImage: "/images/services/manpower-hero-ghana.jpg",
+    heroImage: "/images/services/manpower-hero-ghana.webp",
     heroAlt: "Industrial site workforce crew equipped with safety gear for field operations",
     galleryImages: [
       {
-        src: "/images/services/manpower-gallery-ghana.jpg",
+        src: "/images/services/manpower-gallery-ghana.webp",
         alt: "Skilled technical crew receiving pre-shift operational instructions",
         caption: "Vetted industrial and maritime personnel prepared for deployment."
       }
@@ -228,11 +228,11 @@ export const services = [
       "Scheduled hygiene maintenance routines",
       "Compliance with local environmental health laws"
     ],
-    heroImage: "/images/services/laundry-hero-ghana.jpg",
+    heroImage: "/images/services/laundry-hero-ghana.webp",
     heroAlt: "Industrial commercial laundry and hygiene maintenance equipment",
     galleryImages: [
       {
-        src: "/images/services/laundry-gallery-ghana.jpg",
+        src: "/images/services/laundry-gallery-ghana.webp",
         alt: "Janitorial cleaning staff maintaining immaculate commercial workspace environment",
         caption: "Scheduled janitorial maintenance preserving sanitary workspace conditions."
       }
@@ -258,11 +258,11 @@ export const services = [
       "Project logistics for heavy cargo/machinery",
       "Local supply chain integration"
     ],
-    heroImage: "/images/services/logistics-hero-ghana.jpg",
+    heroImage: "/images/services/logistics-hero-ghana.webp",
     heroAlt: "Port container logistics hub and cargo transport coordination",
     galleryImages: [
       {
-        src: "/images/services/logistics-gallery-ghana.jpg",
+        src: "/images/services/logistics-gallery-ghana.webp",
         alt: "Warehouse inventory management and heavy freight dispatch",
         caption: "Organized warehouse management and material dispatch for industrial clients."
       }
@@ -288,11 +288,11 @@ export const services = [
       "Timely delivery to project storage hubs",
       "Flexible retail and wholesale purchasing agreements"
     ],
-    heroImage: "/images/services/supply-hero-ghana.jpg",
+    heroImage: "/images/services/supply-hero-ghana.webp",
     heroAlt: "Industrial supply warehouse stocked with safety gear, PPE, and consumables",
     galleryImages: [
       {
-        src: "/images/services/supply-gallery-ghana.jpg",
+        src: "/images/services/supply-gallery-ghana.webp",
         alt: "Organized inventory of industrial consumables and site supplies",
         caption: "Continuous stock replenishment of PPE, consumables, and site supplies."
       }
@@ -318,11 +318,11 @@ export const services = [
       "Expatriate relocation assistance",
       "Transit and immigration advice"
     ],
-    heroImage: "/images/services/travel-hero-ghana.jpg",
+    heroImage: "/images/services/travel-hero-ghana.webp",
     heroAlt: "Airport terminal departure gate for corporate travel and personnel transit",
     galleryImages: [
       {
-        src: "/images/services/travel-gallery-ghana.jpg",
+        src: "/images/services/travel-gallery-ghana.webp",
         alt: "Professional travel documentation, passport, and visa assistance review",
         caption: "Dedicated travel support assisting with visa paperwork and airport transfers."
       }
