@@ -34,11 +34,6 @@ export default function SectionHeading({
         {title}
       </h2>
       
-      <div
-        className={`h-1 w-16 bg-accent mt-4 sm:mt-5 rounded ${
-          isCentered ? "mx-auto" : ""
-        }`}
-      />
     </motion.div>
   );
 }

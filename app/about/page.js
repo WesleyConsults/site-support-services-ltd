@@ -60,7 +60,6 @@ export default function About() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
                 Our Story & Capabilities
               </h2>
-              <div className="h-1 w-12 bg-accent rounded" />
               
               {/* Detailed narrative blocks */}
               <div className="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 font-medium">
@@ -90,7 +89,7 @@ export default function About() {
                 <p>
                   When organizations run construction sites, offshore projects, mining fields, port operations, or remote camps, they need food, transport, cleaning, safety support, equipment, logistics, and personnel.
                 </p>
-                <p className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary font-bold text-primary text-xs tracking-wide uppercase">
+                <p className="bg-primary/5 p-4 rounded-lg font-bold text-primary text-xs tracking-wide uppercase">
                   We are a one-stop operational support partner.
                 </p>
               </div>
@@ -113,7 +112,6 @@ export default function About() {
               transition={{ duration: 0.5 }}
               className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm relative overflow-hidden group hover:border-primary-light/30 transition-all duration-300"
             >
-              <div className="absolute top-0 left-0 h-1.5 w-16 bg-accent" />
               <div className="p-3 bg-accent/10 rounded-lg text-accent w-fit mb-6">
                 <Target className="w-6 h-6" />
               </div>
@@ -131,7 +129,6 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm relative overflow-hidden group hover:border-primary-light/30 transition-all duration-300"
             >
-              <div className="absolute top-0 left-0 h-1.5 w-16 bg-accent" />
               <div className="p-3 bg-accent/10 rounded-lg text-accent w-fit mb-6">
                 <Eye className="w-6 h-6" />
               </div>
@@ -164,7 +161,6 @@ export default function About() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="bg-slate-50 border border-slate-100 p-6 sm:p-8 rounded-xl hover:bg-white hover:border-slate-200 hover:shadow-sm transition-all duration-300 relative group"
               >
-                <div className="absolute top-0 left-6 h-1 w-10 bg-transparent group-hover:bg-accent transition-all duration-300" />
                 <h3 className="text-lg font-bold text-primary mb-2.5">
                   {value.title}
                 </h3>

@@ -32,7 +32,6 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
                 Your Trusted Site Operational Support Partner
               </h2>
-              <div className="h-1 w-16 bg-accent rounded" />
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">
                 {companyInfo.aboutSummary}
               </p>

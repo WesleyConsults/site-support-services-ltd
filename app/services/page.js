@@ -58,6 +58,7 @@ export default function Services() {
             {services.map((service, index) => {
               // Dynamically resolve icon
               const IconComponent = LucideIcons[service.iconName] || LucideIcons.HelpCircle;
+              const detailUrl = `/services/${service.slug || service.id}`;
 
               return (
                 <motion.div
@@ -67,25 +68,35 @@ export default function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
-                  className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between scroll-mt-28 hover:bg-white hover:border-primary-light/35 hover:shadow-md transition-all duration-300 group relative overflow-hidden"
+                  className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between scroll-mt-28 hover:bg-white hover:border-primary-light/35 hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
                 >
-                  {/* Accent Line */}
-                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-transparent group-hover:bg-accent transition-all duration-300" />
+                  {/* Stretched invisible overlay link for card clickability without nested <a> tags */}
+                  <Link
+                    href={detailUrl}
+                    tabIndex={-1}
+                    aria-hidden="true"
+                    className="absolute inset-0 z-0 cursor-pointer"
+                  />
                   
-                  <div>
+                  <div className="relative z-10 pointer-events-none">
                     {/* Header */}
                     <div className="flex items-center space-x-4 mb-6">
                       <div className="p-3 bg-white border border-slate-200 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm shrink-0">
                         <IconComponent className="w-6 h-6" />
                       </div>
-                      <h3 className="text-xl font-bold text-primary leading-snug group-hover:text-primary-light transition-all duration-300">
-                        {service.title}
+                      <h3 className="text-xl font-bold text-primary leading-snug group-hover:text-primary-light transition-all duration-300 pointer-events-auto">
+                        <Link
+                          href={detailUrl}
+                          className="hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded"
+                        >
+                          {service.title}
+                        </Link>
                       </h3>
                     </div>
 
                     {/* Description */}
                     <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-                      {service.description}
+                      {service.shortDescription || service.description}
                     </p>
 
                     {/* Deliverables / Bullets */}
@@ -105,16 +116,26 @@ export default function Services() {
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-5 border-t border-slate-200/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
-                      Service Code: SSS-{service.id.toUpperCase()}
-                    </span>
+                  <div className="pt-5 border-t border-slate-200/60 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 relative z-10">
+                    <div className="flex items-center space-x-3">
+                      <span className="text-[10px] bg-slate-200/60 text-slate-600 px-2.5 py-1 rounded font-bold uppercase tracking-wider">
+                        {service.serviceCode || `SSS-${service.id.toUpperCase()}`}
+                      </span>
+                      <Link
+                        href={detailUrl}
+                        className="inline-flex items-center text-xs font-bold text-primary group-hover:text-accent uppercase tracking-wider hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded"
+                      >
+                        View Service Details
+                        <LucideIcons.ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover:translate-x-1" />
+                      </Link>
+                    </div>
+
                     <Link
-                      href={`/contact?service=${encodeURIComponent(service.title)}`}
-                      className="inline-flex items-center text-xs font-bold text-primary group-hover:text-accent uppercase tracking-wider transition-all duration-200"
+                      href={`/contact?service=${encodeURIComponent(service.title)}&code=${encodeURIComponent(service.serviceCode || "")}`}
+                      className="inline-flex items-center justify-center px-3.5 py-2 bg-primary text-white text-xs font-bold rounded-lg hover:bg-primary-light hover:text-accent transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent"
                     >
                       Inquire About Service
-                      <LucideIcons.ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover:translate-x-1" />
+                      <LucideIcons.Send className="w-3.5 h-3.5 ml-1.5" />
                     </Link>
                   </div>
 

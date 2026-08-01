@@ -11,14 +11,29 @@ import { companyInfo, services } from "@/data/siteContent";
 // Separate the form content to safely use useSearchParams in Next.js 15 App Router
 function ContactFormContent() {
   const searchParams = useSearchParams();
-  const preselectedService = searchParams.get("service") || "";
+  const rawService = searchParams.get("service") || "";
+  const rawCode = searchParams.get("code") || "";
+  const rawEquipment = searchParams.get("equipment") || "";
+
+  // Match service by title or slug if needed
+  const matchedService = services.find(
+    (s) => s.title.toLowerCase() === rawService.toLowerCase() || s.slug === rawService || s.id === rawService
+  );
+  const selectedServiceName = matchedService ? matchedService.title : rawService;
+
+  let initialMessage = "";
+  if (rawEquipment) {
+    initialMessage = `Requesting equipment rental quote for: ${rawEquipment}${rawCode ? ` (Ref Code: ${rawCode})` : ""}. Please provide availability and rate details.`;
+  } else if (rawCode) {
+    initialMessage = `Requesting quote / inquiry for ${selectedServiceName || "service"} (Ref Code: ${rawCode}).`;
+  }
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    service: preselectedService,
-    message: "",
+    service: selectedServiceName,
+    message: initialMessage,
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -243,7 +258,6 @@ export default function Contact() {
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
                   Reach Site Support Services
                 </h2>
-                <div className="h-1 w-12 bg-accent rounded" />
                 <p className="text-slate-600 text-sm leading-relaxed font-medium">
                   Have questions about our operations, vehicles, catering packages, or camp management? Reach out to us directly or drop a request via the form.
                 </p>

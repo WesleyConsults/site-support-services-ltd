@@ -17,9 +17,6 @@ export default function ServiceCard({ service, index }) {
       whileHover={{ y: -6, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
       className="bg-white rounded-xl border border-slate-200/80 p-6 sm:p-8 flex flex-col justify-between h-full transition-all duration-300 group shadow-sm hover:border-primary-light/30 relative overflow-hidden"
     >
-      {/* Structural Accent Top-Line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent transition-all duration-300" />
-      
       <div>
         {/* Icon Container */}
         <div className="p-3 bg-primary/5 rounded-lg w-fit text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 mb-6">
@@ -28,7 +25,9 @@ export default function ServiceCard({ service, index }) {
 
         {/* Title */}
         <h3 className="text-xl font-bold text-primary mb-3.5 group-hover:text-primary-light transition-all duration-300 leading-snug">
-          {service.title}
+          <Link href={`/services/${service.slug || service.id}`} className="hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded">
+            {service.title}
+          </Link>
         </h3>
 
         {/* Description */}
@@ -40,10 +39,10 @@ export default function ServiceCard({ service, index }) {
       {/* Footer / Read More Action */}
       <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
         <Link
-          href={`/services#${service.id}`}
+          href={`/services/${service.slug || service.id}`}
           className="text-xs font-bold text-primary group-hover:text-accent uppercase tracking-wider inline-flex items-center transition-all duration-300"
         >
-          Learn More
+          View Details
           <LucideIcons.ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover:translate-x-1" />
         </Link>
       </div>

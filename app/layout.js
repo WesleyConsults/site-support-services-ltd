@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.sitesupportgh.com"),
   title: "Site Support Services Limited | Management, Catering & Logistics",
   description: "Site Support Services Limited provides reliable management, catering, logistics, manpower, facility, and operational support services to clients across Ghana’s Oil & Gas, Construction, Mining, Hospitality, and industrial sectors in Takoradi.",
   keywords: "Catering, Logistics, Camp Management, Manpower supply, Equipment rental, Takoradi, Ghana, Oil and Gas support services",

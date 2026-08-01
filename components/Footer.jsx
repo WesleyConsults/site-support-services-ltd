@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-white text-base font-bold tracking-wide border-l-4 border-accent pl-3">
+            <h3 className="text-white text-base font-bold tracking-wide">
               Quick Links
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Column 3: Featured Services */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-white text-base font-bold tracking-wide border-l-4 border-accent pl-3">
+            <h3 className="text-white text-base font-bold tracking-wide">
               Key Services
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Column 4: Contact details */}
           <div className="flex flex-col space-y-4">
-            <h3 className="text-white text-base font-bold tracking-wide border-l-4 border-accent pl-3">
+            <h3 className="text-white text-base font-bold tracking-wide">
               Contact Us
             </h3>
             <div className="space-y-3.5 text-sm text-slate-400">
