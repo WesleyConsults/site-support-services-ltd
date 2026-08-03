@@ -18,6 +18,13 @@ export const metadata = {
   title: "Site Support Services Limited | Management, Catering & Logistics",
   description: "Site Support Services Limited provides reliable management, catering, logistics, manpower, facility, and operational support services to clients across Ghana’s Oil & Gas, Construction, Mining, Hospitality, and industrial sectors in Takoradi.",
   keywords: "Catering, Logistics, Camp Management, Manpower supply, Equipment rental, Takoradi, Ghana, Oil and Gas support services",
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png", sizes: "1200x1200" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
