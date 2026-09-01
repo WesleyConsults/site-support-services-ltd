@@ -180,12 +180,15 @@ export default function Footer() {
               className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 group"
             >
               <span className="text-xs">Website created by</span>
+              <span className="text-xs font-bold text-slate-200 group-hover:text-accent transition-colors">
+                Wesley Consults
+              </span>
               <Image
                 src="/images/wesley-consults-logo.png"
                 alt="Wesley Consults Logo"
                 width={135}
                 height={74}
-                className="h-[28px] w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                className="h-[26px] w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
               />
             </a>
           </div>
