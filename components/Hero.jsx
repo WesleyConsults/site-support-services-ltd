@@ -112,7 +112,7 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 60, damping: 15, delay: 0.4 }}
             className="lg:col-span-5 hidden lg:block"
           >
-            <div className="relative p-1 bg-gradient-to-br from-primary-light via-primary to-accent/30 rounded-2xl shadow-2xl">
+            <div className="relative p-1 bg-primary-light/60 rounded-2xl shadow-2xl">
               <div className="bg-surface-dark p-8 rounded-[15px] space-y-6">
                 <div className="flex justify-between items-start">
                   <div className="p-3 bg-primary-light/40 rounded-lg text-accent">

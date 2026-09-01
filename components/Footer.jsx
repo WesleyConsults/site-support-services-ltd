@@ -165,14 +165,29 @@ export default function Footer() {
 
       {/* Bottom Legal Panel */}
       <div className="bg-surface-darker py-6 border-t border-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-medium">
-          <p className="text-center sm:text-left mb-2.5 sm:mb-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-medium gap-4 sm:gap-0">
+          <p className="text-center sm:text-left">
             &copy; {currentYear} {companyInfo.name}. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <span className="text-[10px] text-accent uppercase font-bold tracking-widest">
+          <div className="flex items-center space-x-6">
+            <span className="text-[10px] text-accent uppercase font-bold tracking-widest hidden md:inline">
               Reliability at Hand
             </span>
+            <a
+              href="https://wesleyconsults.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 group"
+            >
+              <span className="text-xs">Website created by</span>
+              <Image
+                src="/images/wesley-consults-logo.png"
+                alt="Wesley Consults Logo"
+                width={135}
+                height={74}
+                className="h-[28px] w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+              />
+            </a>
           </div>
         </div>
       </div>
